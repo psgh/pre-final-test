@@ -1,0 +1,15 @@
+<h1>{{ this.constructor.name }}</h1>
+
+<ul *ngIf="show === true">
+  <h2>Our cats</h2>
+  <li *ngFor="let cat of cats" (click)="this.mouseClickEvent($event)">
+    <h3>{{ cat.name }}</h3>
+  </li>
+</ul>
+
+<button (click)="this.hide($event)">Hide list</button>
+
+<div *ngIf="factAvailable">
+  <h2>A fact about cats</h2>
+  {{ fact }}
+</div>
